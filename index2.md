@@ -3,4 +3,4 @@ title: Jordys coding website
 ---
 
 
-This is where I w1ill write my code 
+This is where I will write my code 
