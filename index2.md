@@ -1,6 +1,6 @@
 ---
-title: Test
+title: Jordys coding website
 ---
 
 
-Hello World
+This is where I w1ill write my code 
