@@ -6,7 +6,7 @@ import operator
 import random
 
 
-#Empty or define the beginning of an agents list, remember lists are immutable, this means they cannot be changed
+#Empty or define the beginning of an agents list, remember lists are mutable in Python, this means they can be changed
 agents = []     
 #This is a variable and will store whatever value I put in
 num_of_agents = 10
