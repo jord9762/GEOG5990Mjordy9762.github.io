@@ -1,6 +1,10 @@
+#allows the presentation of plots,graphs etc.. will be used to display agents
 import random
+#allows additional operations such as the itemgetter function
 import operator
+#importing the random package, able to create psuedo random number for testing purposes
 import matplotlib.pyplot
+
 import csv
 import agentframework
 
@@ -72,6 +76,6 @@ matplotlib.pyplot.show()
 
 
 """To get this code to work in command prompt I had to navigate the correct directory using the cd filename command. The final code 
-added in order to get this to work in command prompt was  python /model.py (200,20,30)"""
+added in order to get this to work in command prompt was  python /model.py (200,20,30). Worked fine in Jupyter notebook"""
 
 
