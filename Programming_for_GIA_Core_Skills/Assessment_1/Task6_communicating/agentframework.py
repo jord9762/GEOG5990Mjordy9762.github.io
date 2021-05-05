@@ -98,6 +98,7 @@ class agent:
      for agent in self.agents:
         dist = self.distance_between(agent)
         if dist <= neighbourhood:
+            #this is saying if self.distance_between is less than or equal to 
             sum = self.store + agent.store
             ave = sum /2
             self.store = ave
