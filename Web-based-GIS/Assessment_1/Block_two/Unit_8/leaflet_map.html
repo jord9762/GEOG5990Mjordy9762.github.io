@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<head>
+	<title>Leaflet Map</title>
+	<!--Leaflet stylesheets and source information can be found below-->
+	<link rel="stylesheet" href="https://unpkg.com/leaflet@1.0.3/dist/leaflet.css" /> 
+	<script src="https://unpkg.com/leaflet@1.7.1/dist/leaflet.js"
+    integrity="sha512-XQoYMqMTK8LvdxXYG3nZ448hOEQiglfqkJs1NOQV44cWnUrBc8PkAOcXy20w0vlaXaVUearIOBhiXZ5V3ynxwA=="
+    crossorigin=""></script>
+	<!--This is a link to the Leaflet JS library-->
+	<script src="https://unpkg.com/leaflet@1.0.3/dist/leaflet.js"></script>
+	<!--Links javascript data and by extension the tweets database stored in PGadmin via the fetchData function-->
+	<script language="javascript" type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/1.7.2/jquery.min.js"></script>
+        <link rel="stylesheet" media="all" href="Index_style.css" type="text/css">
+        <script language="javascript" type="text/javascript" src="script.js"></script>
+</head>
+
+<!--The fetchData function calls the php file which will query the tweet data based upon inputs and this will populate the leaflet map-->
+<BODY onload = "fetchData()">
+
+
+<h1>Hurricane sandy tweets map</h1>
+    <div class = "wrapper">
+		<button onclick = 'window.open("http://dialogplus.leeds.ac.uk/geog5870/web21/Web_based_GIS/Assessment%201/index.html")'>Homepage</button><!--added the homepage to go back to the index showing the live versions of all work-->
+		<button onclick = 'window.open("http://dialogplus.leeds.ac.uk/geog5870/web21/Web_based_GIS/Assessment 1/Block two/Unit_8/add_data.html")'>Add data</button><br /><br /><!--adds a link for user to upload new tweets to the database-->
+		<div id = 'textWrap'></div>
+	</div>
+	
+<p>Hurricane Sandy was a severe tropical storm which hit the northeastern US coastline on October 29, 2012 (Kryvasheyeu et al., 2015). It was the largest hurricane of the 2012 season and still remains one of the most costly natural disasters in the United States history (Kryvasheyeu et al., 2015). It is thought that the total
+capital cost of Sandy was around $50 billion and that there were 147 direct casualties (Kryvasheyeu et al., 2015). A state by state breakdown of social cost in the US can be observed in the table below. 
+<h2>Hurricane Sandy statistics (CDC, 2013)</h2>
+<!--Table structured with 3 columns. The <tr></tr> represents table row which from top to bottom displays State, Deaths and Percentage share. Code adapted from:https://www.w3schools.com/html/html_tables.asp -->
+<table>
+  <tr>
+    <th>State</th>
+    <th>Deaths</th>
+    <th>Percentage share</th>
+  </tr>
+  <tr>
+    <td>New York</td>
+    <td>53</td>
+    <td>45.3%</td>
+  </tr>
+  <tr>
+    <td>New Jersey</td>
+    <td>34</td>
+    <td>29.1%</td>
+  </tr>
+  <tr>
+    <td>Pennsylvania</td>
+    <td>12</td>
+    <td>10.3%</td>
+  </tr>
+  <tr>
+    <td>West Virginia</td>
+    <td>6</td>
+    <td>5.1%</td>
+  </tr>
+  <tr>
+    <td>Connecticut</td>
+    <td>4</td>
+    <td>3.4%</td>
+  </tr>
+  <tr>
+    <td>Maryland</td>
+    <td>1</td>
+    <td>0.9%</td>
+  </tr>
+  <tr>
+    <td>Unknown</td>
+    <td>7</td>
+    <td>6%</td>
+  </tr>
+
+</table>
+
+
+
+
+<!--The global var map in script.js will be loaded with the following properties-->
+<DIV id="map" style="width: 600px; height: 400px"></DIV>
+
+<p>The above map shows a selection of related tweets during the hurricane Sandy disaster accompanied by their location. Tweets can be added by the user using the add data button to offer insight into how data can be added interactively via PHP. Icons were taken from <a href="https://icons8.com/icons/set/twitter">https://www.iconsdb.com/</a>
+<p>References: </p>
+<p>Cdc.gov. 2021. Deaths Associated with Hurricane Sandy — October–November 2012. [online] Available at: <https://www.cdc.gov/mmwr/preview/mmwrhtml/mm6220a1.htm> [Accessed 12 April 2021].</p>
+<p>Kryvasheyeu, Y., Chen, H., Moro, E., Van Hentenryck, P. and Cebrian, M., 2015. Performance of Social Network Sensors during Hurricane Sandy. PLOS ONE, 10(2), p.e0117288.</p>
