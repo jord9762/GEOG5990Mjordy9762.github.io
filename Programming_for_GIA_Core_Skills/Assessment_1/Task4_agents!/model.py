@@ -1,5 +1,8 @@
+#importing the random package, able to create psuedo random number for testing purposes
 import random
+#allows additional operations such as the itemgetter function
 import operator
+#allows the presentation of plots,graphs etc.. will be used to display agents
 import matplotlib.pyplot
 import agentframework
 
@@ -31,7 +34,7 @@ matplotlib.pyplot.ylim(0, 99)
 for i in range(num_of_agents):
     matplotlib.pyplot.scatter(agents[i]._x, agents[i]._y)
 matplotlib.pyplot.show()
-
+#iterate between all agents to find the distance between.
 for agents_row_a in agents:
     for agents_row_b in agents:
         distance = distance_between(agents_row_a, agents_row_b)
