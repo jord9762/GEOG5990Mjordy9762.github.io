@@ -1,20 +1,30 @@
+#imports random library which is helpful for testing outcomes, contains functions such as shuffle
 import random
+#imports operators which may be missing from default Spyder
 import operator
+
 import matplotlib.pyplot
+#imports the csv library necessary for reading the 'environmental' csv data (in.csv). 
 import csv
+#imports the agentframework file which must be in the same directory to work, by importing this we can import the agent class.
 import agentframework
+#imports animations from pyplot which will allow 
 import matplotlib.animation 
 """Note to visualise the code in this file the code %matplotlib qt must be inputted in to the ipython console first. Or alternatively
 the code can be ran in the command prompt"""
+#empty list for environment
 environment = []
+#empty list for agents
 agents = []
 num_of_agents = 10
 num_of_iterations = 100
 neighbourhood = 20
 
+#determines the dimensions of the popup figure which will appear following the input of %matplotlib qt
 fig = matplotlib.pyplot.figure(figsize=(7, 7))
 ax = fig.add_axes([0, 0, 1, 1])
 
+#defines the variable carry_on as the boolean true
 carry_on = True
 
 f = open('in.csv', newline='')
@@ -46,7 +56,7 @@ def update(frame_number):
         
            
             
-    #show agents on pyplot
+    #show agents on pyplot with environment csv as backdrop
     matplotlib.pyplot.xlim(0, 100)
     matplotlib.pyplot.ylim(0, 100)
     matplotlib.pyplot.imshow(environment)
