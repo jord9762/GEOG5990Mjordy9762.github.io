@@ -15,7 +15,7 @@ for i in range(num_of_agents):
 # Move the agents.
 for j in range(num_of_iterations):
     for i in range(num_of_agents):
-
+#modulus operator prevents boundary problems resulting from values greater than the grid extent
         if random.random() < 0.5:
             agents[i][0] = (agents[i][0] + 1) % 100
         else:
