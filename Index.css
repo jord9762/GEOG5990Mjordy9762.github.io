@@ -16,7 +16,7 @@ background:linear-gradient(215deg,dodgerblue,white);
 
 
 
-    color: black;
+    color: white;
 /* Changed font size to make for easier viewing*/
     font-size:20px;
 /* Changed font to Calibri*/
@@ -47,5 +47,5 @@ background:linear-gradient(215deg,dodgerblue,white);
 {
   border-radius: 10px;
   -webkit-box-shadow: inset 0 0 6px rgba(0,0,0,.3);
-  background-color: #b78763;
+  background-color: #044c21;
 }
