@@ -12,9 +12,9 @@ import bs4
 import tkinter
 
 
-
+"""WARNING!!!!!"""
 """Note to visualise the code in this file the code %matplotlib qt must be inputted in to the ipython console first. Or alternatively
-the code can be ran in the command prompt"""
+the code can be ran in the command prompt. Note to run this code more than once in the Jupyter terminal may require a restart of the kernel."""
 
 """https://www.youtube.com/watch?v=8exB6Ly3nx0 this excellent resource had info on combining GUI with matplotlib data"""
 
@@ -97,7 +97,7 @@ def update(frame_number):
 
 """In the gen_function function we are assigning the number of iterations the animation will go through. a=0
 means starting at 0 and carry_on while a =<10 leads to 10 iterations being called as the anmation will carry
-on"""
+on until the store reaches 9."""
 def gen_function(b = [0]):
     store = 0
     global carry_on #Not actually needed as we're not assigning, but clearer
@@ -106,7 +106,7 @@ def gen_function(b = [0]):
         store = store + 1
 
 #Extras!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
-"""below is an attempt to carry on with the animation until store reaches 10"""
+
 
 
         
