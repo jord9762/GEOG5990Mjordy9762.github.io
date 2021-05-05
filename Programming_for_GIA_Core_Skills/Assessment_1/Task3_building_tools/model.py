@@ -3,11 +3,11 @@ import operator
 import matplotlib.pyplot
 import time
 
-
-def distance_between(agents_row_a, agents_row_b):
-    return (((agents_row_a[0] - agents_row_b[0])**2) + ((agents_row_a[1] - agents_row_b[1])**2))**0.5
 """we enter in agents row a and row b because this reduces our code for when the function is called, we now no longer need to express an agent 
 as ([0][1],[0][0]) and we can now express in the more logical [0] and [1]"""
+def distance_between(agents_row_a, agents_row_b):
+    return (((agents_row_a[0] - agents_row_b[0])**2) + ((agents_row_a[1] - agents_row_b[1])**2))**0.5
+#Starts timer to assess efficency of code. 
 start = time.clock()
 num_of_agents = 10
 num_of_iterations = 100
@@ -54,7 +54,7 @@ for i in range(num_of_agents):
             answer = distance_between(agents[i], agents[j])
              
             
-       
+ #lines 58 to 62 will print the time it takes for code to execute.      
 end = time.clock()
 print("time = " + str(end - start))
 """Time for 10 agents 0.15 seconds
