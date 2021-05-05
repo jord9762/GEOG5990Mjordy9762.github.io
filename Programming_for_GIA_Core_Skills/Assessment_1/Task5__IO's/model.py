@@ -1,4 +1,4 @@
-#imports a series of python operators which may not be available for use by default using Spyder. 
+#imports random library which is helpful for testing outcomes, contains functions such as shuffle
 import random
 #imports features of pyplot and numpy
 import operator
