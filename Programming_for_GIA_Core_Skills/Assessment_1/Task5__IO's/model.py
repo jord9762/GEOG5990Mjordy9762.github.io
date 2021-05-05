@@ -1,11 +1,12 @@
-import random
 #imports a series of python operators which may not be available for use by default using Spyder. 
-import operator
+import random
 #imports features of pyplot and numpy
+import operator
+#imports the csv library necessary for reading the 'environmental' csv data (in.csv). 
 import matplotlib.pyplot
-##imports the csv library necessary for reading the 'environmental' csv data (in.csv). 
-import csv
 #imports the agentframework file which must be in the same directory to work, by importing this we can import the agent class.
+import csv
+#imports agentframework i in the same directory
 import agentframework
 
 
