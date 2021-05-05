@@ -34,7 +34,7 @@ else:
     x1 -= 1
 
 print(y1, x1)
-#Whole equation I initially came up with, efficent but potentially difficult to understand. 
+#Whole equation I initially came up with for calculating euclidian distance between points, efficent but potentially difficult to understand. 
 answer = (((y0 - y1)**2) + ((x0 - x1)**2))**0.5 
 print (answer)
 
