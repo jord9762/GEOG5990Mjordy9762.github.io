@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<head>
+	<script type="text/javascript" src="http://maps.google.com/maps/api/js"></script>
+	<script type="text/javascript" src="jscoord-1.1.1.js"></script><!--link to JS file named jscoord-1.1.1.js which is an open source coordinate system which can be used to convert between coordinate systems-->
+	<script type="text/javascript" src="blueplaques_data_processed.js"></script><!--link to JS file named blueplaques_data_processed.js which contains data regarding the blue plaques-->
+	<script type="text/javascript" src="map_setup_plaques.js"></script><!--link to JS file named map_setup_plaques.js which will show the map as well as the markers and associated info. Will also convert coordinates-->
+	<link rel="stylesheet" media="all" href="Index_style.css" type="text/css">
+	<title>Blue plaques example</title>
+<p style="color:black;font-size:17px;"http://dialogplus.leeds.ac.uk/geog5870/web21/Web_based_GIS/index.html</p>
+</head>
+    <div class = "wrapper">
+		<button onclick = 'window.open("http://dialogplus.leeds.ac.uk/geog5870/web21/Web_based_GIS/Assessment%201/index.html")'>Homepage</button><!--link back to live versions of work in index with button click-->
+		<button onclick = 'window.open("https://www.w3schools.com/")'>Build your own!</button>		<br /><br /><!--link to WS3 schools for help building web based applications-->
+		<div id = 'textWrap'></div>
+	</div>
+
+<body onload="initialize()">
+	<h1>Blue plaque distribution throughout the city of Leeds accompanied by contextual information</h1>
+	<div class="gmap" id="map_canvas" style="height: 70%; width: 70%"></div>
+        <p style="color:black;font-size:17px;">What are blue plaques?</p>
+		<!--Adds image as well as specifying image height and width in pixels-->
+        <img src="Leeds.jpg" width="400" height="300" alt="Leeds blue plaque">
+<p style="color:black;font-size:11px;">(openplaques, 2021)</p>
+        <p style="color:black;font-size:15px;">The blue plaque scheme serves as a reminder of places or people of interest, they are typically accompanied by a snippet of context information to best describe their influence and 
+           achievements within the context of their associated city (BBC, 2016). The original scheme was founded in 1866 and according to English Heritage has inspired many similar schemes not just
+           in the UK but also around the world (English Heritage, 2021). While originating in London many prominent cities have Blue plaques erected to commemorate events and people such as Birmingham and 
+           Leeds.The Leeds branch of the blue plaque scheme was created by the Leeds Civic Trust in 1987 (Headingley Leeds, 2019).</p>
+
+        <p style="color:black;font-size:15px;">References:</p><!--list of references-->
+ <p>BBC News. 2016. Who deserves a blue plaque?. [online] Available at: <https://www.bbc.co.uk/news/uk-england-36322761> [Accessed 22 February 2021].</p>
+ <p>English Heritage. 2021. Blue Plaques | English Heritage. [online] Available at: <https://www.english-heritage.org.uk/visit/blue-plaques/> [Accessed 22 February 2021].</p>
+ <p>Headingley Leeds. 2019. Blue Plaques — Headingley Leeds. [online] Available at: <https://www.headingleyleeds.com/blue-plaques> [Accessed 22 February 2021].</p>
+ <p>Plaques, O., 2021. J. R. R. Tolkien blue plaque. [online] Openplaques.org. Available at: <https://openplaques.org/plaques/11793> [Accessed 22 February 2021].</p>
+
+
+
+ 
+ 
+
+        <p style="color:black;font-size:15px;">For more information please search below:</p>
+        <li><a href = 'https://www.english-heritage.org.uk/visit/blue-plaques/'>English Heritage</a></li>
+        <li><a href = 'https://www.headingleyleeds.com/blue-plaques'>Headingly Blue plaques</a></li>
+        <li><a href = 'https://www.bbc.co.uk/news/uk-england-36322761'>BBC News: Who deserves a blue plaque?</a></li>
+        
+        <p style="color:black;font-size:15px;">Data avaliable at:</p>
+        <li><a href = 'https://census.ukdataservice.ac.uk/'>Census UK data service</a></li>
+        
+
+
+</body>
+
+
