@@ -4,13 +4,14 @@ import random
 import operator
 #allows the presentation of plots,graphs etc.. will be used to display agents
 import matplotlib.pyplot
-
+#imports the agentframework file which must be in the same directory to work, by importing this we can import the agent class.
 import csv
+#imports agentframework i in the same directory
 import agentframework
 
 
 
-
+#creates a new empty list for what will be the csv environment data
 environment = []
 agents = []
 num_of_agents = 10
