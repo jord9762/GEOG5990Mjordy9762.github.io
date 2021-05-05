@@ -4,8 +4,66 @@
   <link rel="stylesheet" media="all" href="Index.css" type="text/css"> <!--link to CSS file-->
 </head>
 <body>
-	<h1>Jordan Reynoldson | Web-based GIS work | 2009294183 </h1>
-	<p> Welcome to my homepage</p>
+	<!--Code from lines 21 to 79 adapted from the WS3 schools tutorial on how to create interactive banners. -->
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<style>
+* {box-sizing: border-box;}
+
+body { 
+  margin: 0;
+  font-family:Monaco;
+}
+
+.header {
+  overflow: hidden;
+  background-image: url("https://i.pinimg.com/originals/72/50/b0/7250b0a1553c81e102bab8490999060e.jpg");
+  padding: 40px 30px;
+  background-repeat: no-repeat;
+  background-size: 2800px 800px;
+}
+
+.header a {
+  float: center;
+  color: white;
+  text-align: center;
+  padding: 12px;
+  text-decoration: none;
+  font-size: 18px; 
+  line-height: 25px;
+  border-radius: 4px;
+}
+
+.header a.logo {
+  font-size: 25px;
+  font-weight: bold;
+}
+
+.header {
+  background-color: #ddd;
+  color: black;
+}
+
+.header a.active {
+  background-color: #eab676;
+  color: white;
+}
+
+.header-right {
+  float: right;
+}
+
+@media screen and (max-width: 500px) {
+  .header a {
+    float: none;
+    display: block;
+    text-align: left;
+  }
+  
+  .header-right {
+    float: none;
+  }
+}
+</style>
 
 	<a href = 'https://www.linkedin.com/in/jordan-reynoldson-0a46791b7/'> Here is my linkedin webpage</a> <!--This is a absolute path link-->
 	<br />
