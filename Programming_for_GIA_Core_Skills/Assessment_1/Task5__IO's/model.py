@@ -7,7 +7,7 @@ import matplotlib.pyplot
 import csv
 #imports the agentframework file which must be in the same directory to work, by importing this we can import the agent class.
 import agentframework
-import sys
+
 
 #creates a new empty list for what will be the csv environment data
 environment = []
