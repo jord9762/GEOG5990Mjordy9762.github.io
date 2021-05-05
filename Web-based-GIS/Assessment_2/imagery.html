@@ -1,0 +1,289 @@
+<!DOCTYPE html>
+<head>
+	<title>Leaflet Map</title>
+	<!--Leaflet stylesheets and source information can be found below-->
+	<link rel="stylesheet" href="https://unpkg.com/leaflet@1.0.3/dist/leaflet.css" /> 
+	<script src="https://unpkg.com/leaflet@1.7.1/dist/leaflet.js"
+    integrity="sha512-XQoYMqMTK8LvdxXYG3nZ448hOEQiglfqkJs1NOQV44cWnUrBc8PkAOcXy20w0vlaXaVUearIOBhiXZ5V3ynxwA=="
+    crossorigin=""></script>
+	<!--This is a link to the Leaflet JS library-->
+	<script src="https://unpkg.com/leaflet@1.0.3/dist/leaflet.js"></script>
+	<!--Links javascript data and by extension the tweets database stored in PGadmin via the fetchData function-->
+	<script language="javascript" type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/1.7.2/jquery.min.js"></script>
+        <link rel="stylesheet" media="all" href="Index_style.css" type="text/css">
+        <script language="javascript" type="text/javascript" src="script.js"></script>
+
+
+<!--The fetchData function calls the php file which will query the crusade data based upon inputs and this will populate the leaflet map-->
+<BODY onload = "fetchData()">
+
+<!--Code from lines 21 to 79 adapted from the WS3 schools tutorial on how to create interactive banners. -->
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<style>
+* {box-sizing: border-box;}
+
+body { 
+  margin: 0;
+  font-family:Monaco;
+}
+
+.header {
+  overflow: hidden;
+  background-image: url("https://i.pinimg.com/originals/72/50/b0/7250b0a1553c81e102bab8490999060e.jpg");
+  padding: 40px 30px;
+  background-repeat: no-repeat;
+  background-size: 2800px 800px;
+}
+
+.header a {
+  float: center;
+  color: white;
+  text-align: center;
+  padding: 12px;
+  text-decoration: none;
+  font-size: 18px; 
+  line-height: 25px;
+  border-radius: 4px;
+}
+
+.header a.logo {
+  font-size: 25px;
+  font-weight: bold;
+}
+
+.header {
+  background-color: #ddd;
+  color: black;
+}
+
+.header a.active {
+  background-color: #eab676;
+  color: white;
+}
+
+.header-right {
+  float: right;
+}
+
+@media screen and (max-width: 500px) {
+  .header a {
+    float: none;
+    display: block;
+    text-align: left;
+  }
+  
+  .header-right {
+    float: none;
+  }
+}
+</style>
+</head>
+<body>
+
+<div class="header">
+  <a href="#center" class="logo">GY20JCR's Interactive History: Crusades Edition</a>
+  <div class="header-right">
+    <a class="active" href="http://dialogplus.leeds.ac.uk/geog5870/web21/Web_based_GIS/UFO_Test/leaflet_map.html">Home</a>
+    <a href="http://dialogplus.leeds.ac.uk/geog5870/web21/Web_based_GIS/UFO_Test/imagery.html">Imagery</a>
+    <a href="http://dialogplus.leeds.ac.uk/geog5870/web21/Web_based_GIS/UFO_Test/add_data.html">Add marker</a>
+  </div>
+</div>
+
+
+
+
+<p>
+<b>Kolossi castle:</b><br/>
+Kolossi castle was built in the 13th century and resides in the Cypriot city of Limasol. After the fall of Acre in 1291 Kolossi served as a prominent bastion for the Knights of the Order of St John and in the 14th century was occupied by the Knights Templar. The Knights Templar developed the 'vin de Commanderie' wine which is one of the oldest wines in the world.
+</p>
+<img src="https://images.myguide-cdn.com/cyprus/companies/kolossi-medieval-castle/large/kolossi-medieval-castle-180705.jpg" width="400" height="300">
+
+<p>
+<b> Pharaoh’s Castle:</b><br/>
+The Pharaoh's island castle was built by the famous Baldwin I of Jerusalem during the first crusade. Baldwin saw this as of strategical importance as it was situated within the crossroads between Mecca and Egypt. Baldwin saw the fortress as a means to protect the Kingdom of Jerusalem, from the perspective of Muslim citizens the castle was highly infamous as pilgrims would often be held for ransom to fund the ongoing hostilities between Christian and Muslim countries.
+</p>
+<img src="https://www.cleopatraegypttours.com/wp-content/uploads/2018/08/Pharaoh%E2%80%99s-Island-in-Egypt.jpg" width="400" height="300">
+
+<p>
+<b> Temple Church:</b><br/>
+The influence of the Knights Templar was far reaching and their exploits allowed them to amass such wealth that they bought large islands such as Cyprus for their own leisure. By the mid-12th century saw the construction of the Temple Church which would serve as the headquarters for the London chapter of the Knights Templar. The Temple Church was a round church based off the Holy Sepulchre in Jerusalem, there are only three other churches modelled this way in Britain. The nave of the church has a fortress like aesthetic likely reflecting the Templars combination between religion and warfare. The allegations of devil worship were ultimately thrown at the Templar Order leading to the dissolution of the Templars in 1312 (Ruggeri, 2016). 
+</p>
+<img src="https://upload.wikimedia.org/wikipedia/commons/f/f4/Temple_Church%2C_Temple%2C_London_EC4_%282%29.jpeg" width="400" height="300">
+
+<p>
+<b> Warfleet creek:</b><br/>
+War fleet creek was of significant strategic value for Dartmouth dating back to the Norman times. The French realised the value of the harbour as it would foster safe links between French and English waters. By the 12th century Warfleet creek was of such importance that it was actually used as the assembly point for a fleet of 146 ships setting out for the second crusade in 1147. The creek would be used again in the third crusade highlighting its significance within the crusade era. 
+</p>
+<img src="https://www.historic-uk.com/wp-content/uploads/2017/01/dartmouth-devon.jpg" width="400" height="300">
+<p>
+<b> Clermont:</b><br/>
+Clermont held significance among all of the crusades as it was the location which sparked their inception. The Council of Clermont saw Pope Urban II call the first crusade in the year of 1095 November 18th. The request which sparked the council was made by Emperor Alexius I Comnenus to aid the Greeks against the Muslim Turks. The Pope implored the French knights in Clermont to "save" the "Holy Land" from the Turks. Urban II closed his assembly speech with the words god wills it and this became the battle cry of all crusaders (Britannica, 2021).
+</p>
+<img src="https://d1bvpoagx8hqbg.cloudfront.net/originals/clermont-ferrand-f1f28fecc36b33716cb61d4a390d650c.jpg" width="400" height="300">
+<p>
+<b> La Rochelle:</b><br/>
+La Rochelle was a port in France which was well known for being the primary naval port of the Knights Templar and thus it would have held significant prestige during the Crusades. This prestige would have diminished following the dissolution of the Templars. Despite this there are rumours that large quantities of Templar treasure were smuggled out of city to prevent their wealth from being seized by the church. </p>
+<img src="https://www.azamara.co.uk/sites/default/files/heros/bordeaux-la-rochelle-1800x1000.jpg" width="400" height="300">
+<p>
+<b> Castle of Roquefixade:</b><br/>
+The Castle of Roquefixade or Chateau de Roquefixade was a French castle which served as the home for the lords of Pailhès, the families who resided in this castle were vassals to the Counts of Tolouse and Foix and as such fought in the first crusade with them.</p>
+<img src="https://upload.wikimedia.org/wikipedia/commons/thumb/6/6c/Chateau_de_Roquefixade01.jpg/1200px-Chateau_de_Roquefixade01.jpg" width="400" height="300">
+<p>
+<b> Grandmaster Palace - Rhodes:</b><br/>
+The Grandmaster Palace in Rhodes served as the primary headquarters for the Hospitaller Knights. Despite being a bastion for the Hospitaller Knights it was also allegedly somewhat of a vault (Borowski and Gerrard, 2017). The Knights Hospitaller were thought to have acquired many holy relics such as thorns from the crown of thorns, the thirty pieces of silver paid to Judas and the relics of Saint Anthony (Borowski and Gerrard, 2017). </p>
+<img src=" https://www.greece-is.com/wp-content/uploads/2016/04/RHODES_PALACE_OF_THE_GRANDE_MASTERS_001.jpg " width="400" height="300">
+<p>
+<b> Crac des Chevaliers:</b><br/>
+The Crac des Chevaliers was a castle located in Syria which has seen many changes in allegiances throughout history. In 1200 this castle was occupied by the knights Hospitaller however the Mamluk Sultanate took control of the castle after much conflict in the year of 1271 and thus became a key landmark in the Mamluk Empire.</p>
+<img src=" https://www.gulftoday.ae/-/media/gulf-today/images/articles/lifestyle/2020/10/24/heritage1.ashx?h=450&w=750&hash=7FDA79433F0BA2EDBF9927612DF24C23 " width="400" height="300">
+<p>
+<b> Chateau Pelerin:</b><br/>
+Chateau Pelerin was one of the most famous and successful Templar castles and its name roughly translates to Castle Pilgrim. There were thought to be around 4000 troops located here during the peak of Templar occupation. One of the most ingenious design choices of this castle was its unique double wall. As the inner wall was taller than the outer wall it allowed defenders to shoot down on attackers while also preventing breaches of the castle walls. As a result of this Chateau Pelerin withstood many sieges.</p>
+<img src=" https://www.ynetnews.com/PicServer5/2017/03/14/7650281/765027201001456640360no.jpg " width="400" height="300">
+
+<p>
+<b> Tiberias City:</b><br/>
+Tiberias was an ancient city in Jerusalem founded in 4 BC, it acquired its name from Emperor Tiberius who was the ruler of the Roman Empire at the time. It is thought that the scriptures used for public reading of the Old Testament today were developed in Tiberias in the 8th and 9th centuries respectively. The siege of Tiberias is thought to be one of the primary events in the omission of Crusader control in Palestine. 
+</p>
+<img src=" https://thegalileeboat.com/wp-content/uploads/sites/3/2019/10/bigstock-189605140.jpg" width="400" height="300">
+
+<p>
+<b> Acre:</b><br/>
+Under the Frankish kings Acre was widely regarded as the richest town in the Kingdom of Jerusalem, as such it had extreme political importance for the Crusader forces. By 1187 it was taken by Saladin, Saladin often visited Acre to assess the damages caused by his troops during the siege of Acre. Despite being an impressive city Acre is largely marred in atrocity due to its central role in the crusades with the most prominent being Richard III''s massacre of more than 3000 innocents on the 20th August 1191.</p>
+<img src=" https://3.bp.blogspot.com/-9bouQq-o0hs/WlWuIIYVgeI/AAAAAAAANWo/t--HOAHluTc9n6q9bcGeDUoKD4nAm0mOQCLcBGAs/s1600/AcreWalls.jpg " width="400" height="300">
+
+
+
+<p>
+<b> Jaffa:</b><br/>
+Jaffa was a city which marked the final battle of the Third crusade which led directly to a peace deal between Richard the Lionheart and Saladin. Jaffa was of significant importance in terms of capturing Jerusalem as it was the Holy City's port of entry. After much conflict 1192 saw the signing of the treaty of Jaffa which was a three year truce limiting the Crusaders to only coastline territories. Despite this treaty Richards death on his return home saw the English troops never return.
+</p>
+<img src=" https://upload.wikimedia.org/wikipedia/commons/thumb/8/8e/Jaffa_IL_WV.JPG/1200px-Jaffa_IL_WV.JPG " width="400" height="300">
+<p>
+
+
+<b> Church of the Holy Sepulchre:</b><br/>
+The Church of the Holy Sepulchre is thought to be the traditional site of Jesus' crucifixion and burial and thus there was a high perceived importance by those of the Christian community at the time. It was built by Emperor Constantine the great of Rome. Due to the constant shift in power in Jerusalem it has seen various sackings and reparations. During 2016 the shrine of Edicule was opened for the first time in modern history to undergo reparations, the marble found inside were dated back to around 345 AD.</p>
+<img src=" http://www.pravoslavie.ru/sas/image/102156/215624.p.jpg?mtime=1443192954 " width="400" height="300">
+<p>
+<b> Temple Mount/Haram al-Sharif:</b><br/>
+Temple Mount or Haram al-Sharif is a highly controversial place of worship as it has significant Jewish and Muslim reverence. It is thought to be the holiest site in all of Judaism. Muslims believe this was the site where the prophet Mohammed ascended to heaven, as such there has been significant conflict in the past between Muslims and Jews which still continues to this day. </p>
+<img src=" https://www.nationsonline.org/gallery/Israel/Dome-of-the-Rock-Temple-Mount.jpg " width="400" height="300">
+<p>
+<b> Maldoim:</b><br/>
+Maldoim was a significant strategic location for Templars during the Crusades as it allowed the monitoring of movement between Jericho and Jerusalem. Pilgrims were known to frequent this route to bathe in the river Jordan. Maldoim also had the moniker the Red-Cistern as the fortress was built on a unique red-coloured rock..
+</p>
+<img src=" https://lh3.googleusercontent.com/proxy/z3VsLDclHLYtJH1Mt-UPAgksu0uPZFPZoJXLXDrN1oO2BOlW6tv5V_mwfpK8vLLSfOfzRQmk2OEDRwkLT_2emP9gpc-C-GfnOsCg8AE8hqcRSo9Zfmf5oot4YsY-ULrWnMxeIEltysQmMw7ebhqzJxkY " width="400" height="300">
+
+
+
+<p>
+<b> Messina Port:</b><br/>
+Located in Italy Messina port was of significant value in the crusades as the Templars and Hospitallers influence meant it was a stable base to ship supplies to the Holy Land (Bronstein, 2018). While a variety of cargo type was thought to be shipped from Messina port it was primarily famous for shipping horses over to aid the Knights fighting in the Holy Land (Bronstein, 2018)..
+</p>
+<img src=" https://www.excursionssicily.com/wp-content/uploads/2018/10/messina-2022382_1920.jpg " width="400" height="300">
+<p>
+
+<b> Castello Della Magione:</b><br/>
+The Castello Della Magione is a Templar castle situated in Tuscany, Italy. While looking fairly inconspicuous in present day this was actually the site of a former church used to house Templar pilgrims on their way to Rome. An aerial view of this location shows a compact fortified structure which is where it gets its description of a castle. Since the dissolution of the Templar order it is now home to a branch of the Catholic Church known as the Order of Poor Knights of Christ. </p>
+<img src=" https://www.histouring.com/data/cch/addon_gallery/14281280x1024xy/schermata%202017-08-16%20alle%2021.20.03_5.png " width="400" height="300">
+<p>
+<b> Kerak Castle:</b><br/>
+Kerak Castle is a 12th century crusader fortification built along the Kings Highway in Jordan. The site appears in the bible where a siege is supposed to have occurred here led by the King of Israel. During the first crusade the castle was ran by Reynald of Chatillon who was infamous for his ruthlessness and barbaric acts. </p>
+<img src=" https://www.zamantours.com/wp-content/uploads/2020/05/kerak-Castle-1.jpg " width="400" height="300">
+<p>
+<b> Ajloun Castle:</b><br/>
+Ajloun castle was a grand fortress commissioned by Saladin and built by his nephew Izz al-Din Usama. The primary goal of the fortress was to serve as a military deterrent for the Frankish forces who were edging closer into Saladin's territories. Ajloun Castle lost much of its significance after the fall of Karak and was only used as a means to secure important trade routes into Syria. The castle saw another rise to prominence in future hostilities between the Mamluks and the Mongols. </p>
+<img src=" https://www.almarasems.com/sites/default/files/2020-03/IMG_8448%202_0.JPG " width="400" height="300">
+<p>
+<b> Shobak Castle:</b><br/>
+Shobak Castle was built in 1115 AD by Baldwin I during the first Crusade. As with many locations during this time it suffered many conflicts and eventually fell to the Ayyubid dynasty in 1187, led by Saladin (Mustafa, 2012). Shobak castle was eventually restored by the Mamluks in the 14th century (Mustafa, 2012). </p>
+<img src=" https://cdn.odysseytraveller.com/app/uploads/2020/03/jordan-4124566_1920.jpg " width="400" height="300">
+<p>
+
+
+<b> Sidon Sea Castle:</b><br/>
+Sindon Sea Castle was built on top of an ancient Phoenician temple. The sea castle’s primary objective was to offer protection to the Saida Harbour in Lebanon. The Mamluks destroyed the castle in 1291 in an attempt to prevent Crusaders from ever establishing prominence in the area again. The castle was rebuilt in the 17th century.</p>
+<img src=" https://upload.wikimedia.org/wikipedia/commons/f/f5/SidonSeaCastle.jpg " width="400" height="300">
+<p>
+<b> Tripoli:</b><br/>
+The County of Tripoli was a crusader state home to the significantly important Tripolis which was the most important port of Damascus. With the help of the Byzantium emperor Alexios I, Raymond of Toulouse captured Tripolis in 1109 thus significantly bolstering the Byzantines grip on the surrounding area. The county was ruled by independent lordships who were each tasked with the rule of a port or castle. </p>
+<img src=" https://strongcitiesnetwork.org/en/wp-content/uploads/sites/5/2019/01/tripoli-pic-e1548266739219.jpg " width="400" height="300">
+<p>
+<b> Grandmaster Palace - Valletta:</b><br/>
+Grandmaster Palace - Valletta: The Grandmaster Palace in Valletta was a headquarters for the Knights Hospitallers based in Malta. The Palace holds remnants of what was thought to be the main armoury of Saint John (Vella et al., 2004).</p>
+<img src=" https://media-cdn.tripadvisor.com/media/photo-s/08/7b/ea/ea/grandmaster-s-palace.jpg" width="400" height="300">
+<p>
+<b> Castle of Almourol:</b><br/>
+The castle at Almourol was built to improve Templar defences during the Portuguese Reconquista. While thought to have been initially built in the Roman era the castle was expanded on significantly by the Templars in 1171 AD. After the dissolution of the Knights Templar in 1312 AD the castle was largely abandoned. In modern day it is in Portugal’s top 10 visitor attractions. </p>
+<img src=" https://www.travel-in-portugal.com/sites/default/files/photos/almourol-castle.jpg " width="400" height="300">
+<p>
+<b> Castelo dos Mouros:</b><br/>
+Also known as castle of the Moors Castelo dos Mouros was once a significant castle which protected the entire region of Sintra (Portugal). The castle was built on a high vantage point which improved its strategic value considerably (much like the Alhambra in Grenada). In 1147 the castle fell to Christian rule and the castle eventually became engulfed in forest due to neglect. 
+</p>
+<img src=" https://www.parquesdesintra.pt/media/wyhgstdr/parques_de_sintra_castelo_dos_mouros_hero_01.jpg?anchor=center&rnd=132442499820870000&preset=hero4Bigmin1280 " width="400" height="300">
+
+<p>
+<b> Temple of Midlothian:</b><br/>
+Adjacent to the river Esk near the city of Edinburgh the Temple of Midlothian was once the headquarters of the templar order in Scotland. There are rumours dating back to the 1300's that when the Templars were dissolved that some of their treasure was smuggled out of France and buried in the Temple of Midlothian. 
+</p>
+<img src=" https://lh3.googleusercontent.com/proxy/88wF00R-aV_XN19d9OzHH-rydM-dGMgLpFX4qzyABEBzgEo5cIAO404B-mL5QtxM4LA-XOqwy574OgvLB2RoCIiPzikpf_fuKt4eAPzuO2s83TBLMSwfgULDiSzdpWsdp9MCIjPWpA " width="400" height="300"<p>
+
+<p>
+<b> Toledo:</b><br/>
+Toledo was a city in Spain and during the first crusade was the site of a siege. The siege was fought between Christians and Muslims for control of the Iberian Peninsula. The fall of Toledo in was significant as it was the capital of the Muslim kingdom of Taifa. The fall of Toledo ultimately sparked the catalyst for the Reconquista or the Christian conquest of Muslim Spain. 
+</p>
+<img src=" https://velvetescape.com/wp-content/uploads/2016/05/IMG_8401-1280x920.jpeg " width="400" height="300">
+
+
+
+<p>
+<b> Citadel of Salah Ed-Din:</b><br/>
+This fortress was also known as Saladin castle and has been used as a fortification perhaps dating back to Phoenician control and later by Alexander the Great. After being developed further by the Byzantines the stronghold fell to Saladin during 1188. The citadel is recognised as a UNESCO world heritage site as of 2006. Following the capture orchestrated by Saladin a palace, mosque and series of baths were developed in keeping with popular Arabic architecture. </p>
+<img src=" https://i.pinimg.com/originals/54/a0/cf/54a0cf36a48dcaac21d84c729cf5c692.jpg " width="400" height="300">
+<p>
+<b> Arwad:</b><br/>
+Arwad is an island located 3km away from Tartus (Syria) and is thought to have dated back to around 2nd millennium BC. Given the fact that Arwad has played an important role in Mediterranean trade throughout the years Arwad has suffered a turbulent past seeing attempted occupation from Assyrians, Franks, Romans and Templars to name a few. 
+</p>
+<img src=" https://www.aymennjawad.org/jawad/pics/large/2920.jpg " width="400" height="300">
+<p>
+<b> Chastel Blanc:</b><br/>
+The castle of Safita (Chastel Blanc) was a Templar stronghold in Syria, due to being situated near the coast it would have had significant strategic importance. During 1271 it fell to Mamluk control and was almost completely destroyed. Its original layout is difficult to ascertain due to the extent it was damaged (Kázmér and Major, 2015). </p>
+<img src=" https://live.staticflickr.com/30/42593294_c8367f2cb5_z.jpg " width="400" height="300">
+<p>
+<b> Qal’at Salah El-Din:</b><br/>
+The fortress of Saladin despite being in partly ruin is testament to the architectural brilliance of some of the fortresses and castles during the crusader period. The fortress was initially built by the Byzantines but the fortress underwent improvement following subsequent Frankish and Ayyubid occupations. Qal’at Salah El-Din sits upon a large hill and dominates the surrounding landscape. </p>
+<img src=" https://media-cdn.tripadvisor.com/media/photo-s/12/a2/b1/0c/cartoline-da-sayhun-siria.jpg " width="400" height="300">
+
+
+<p>
+<b> Margat Castle:</b><br/>
+The Margat Castle or Qalʿat al-Marqab is one of the largest forts in Syria and overlooks the Mediterranean sea from a triangular volcanic plateau (Edbury et al., 2020). As its 360m above sea level it would have held a significant strategic advantage in the event of a siege. Despite its grandiose there is almost no history regarding its occupation and construction (Edbury et al., 2020). </p>
+<img src=" https://i.pinimg.com/originals/0d/33/50/0d3350d2dec4d6547d0b1802b82d8531.jpg " width="400" height="300">
+<p>
+<b> Damascus:</b><br/>
+Damascus is the capital of Syria and has often been referred to as the pearl of the east due to its beauty. The origin of Damascus is dubious as even its name "Dimashka" is a word thought to have originated in a time before pre-recorded history. During 1148 a siege occurred in Damascus which ultimately set up the failure of subsequent crusades as Christian influence was limited to small city states surrounded by superior Muslim numbers.</p>
+<img src="https://cdn.britannica.com/91/177991-050-D8667CD8/Umayyad-Mosque-Damascus.jpg" width="400" height="300">
+<p>
+<b> Tortosa:</b><br/>
+Tortosa or Tartus was a city located in modern day Syria. It is home to one of the Syria's best preserved religious structures "The Cathedral of our Lady of Tortosa". During 1152 Templars occupied the city building a military keep accompanied by outer walls however this fell in 1291 to the Mamluks. 
+</p>
+<img src=" https://upload.wikimedia.org/wikipedia/commons/f/fa/Tartus_Sea_-_panoramio.jpg " width="400" height="300">
+<p>
+<b> Bodrum Castle:</b><br/>
+Bodrum castle or the Castle of St. Peter was built by the Hospitallers, Knights of St. John and the Knights of Rhodes. The castle had been invaded/changed ownership a number of times and as such it has French, Spanish, German, Italian and English towers. It currently holds the status of outstanding universal value by UNESCO and the World Heritage convention. 
+</p>
+<img src=" https://www.turkishconnextions.co.uk/blogs/bodrum_castle.jpg " width="400" height="300">
+<p>
+<b> Anitoch:</b><br/>
+Anitoch was a great ancient city founded by Norman Bohemund. Anitoch was previously owned by the Byzantines but was also a crusader state similar to Tripoli. Unlike many crusader states at the time the population was primarily made up of Christians due to its historical ties to Byzantium. </p>
+<img src=" https://cdn.britannica.com/25/151325-050-8CA6CAEA/street-ruins-Antioch-Turkey.jpg " width="400" height="300">
+<p>
+<b> Constantinople:</b><br/>
+Constantinople or Istanbul as it is known presently has been at the heart of religious conflict between Europe and Asia for more than 2500 years. During 1204 Constantinople was sacked in what was described by many as an act fuelled by greed rather than principle. Many historians claim that the sacking of Constantinople highlights that the 4th crusade was distracted from its purpose early on. Once the city was breached the crusaders pillaged and looted what was commonly referred as "The greatest city in Christendom". </p>
+<img src=" https://www.history.com/.image/ar_1:1%2Cc_fill%2Ccs_srgb%2Cfl_progressive%2Cq_auto:good%2Cw_1200/MTU3ODc5MDg3MjM2NjU0NDA5/walls-of-constantinople-and-the-city.jpg " width="400" height="300">
+<p>
+<b> Hagia Sophia:</b><br/>
+The Hagia Sophia was built by Christian architects nearly 1500 years ago and is widely regarded as one of the longest enduring symbols of Constantinople. The two major influences in terms of worship have been Orthodox Christians and Muslims. Given its age the Hagia Sophia has undergone a series of renditions in terms of aesthetics exhibiting both Muslim and Christian style architecture in modern day. During the crusades the Hagia Sophia lay severely damaged however this was repaired after the Byzantines took back full control. </p>
+<img src=" https://news.artnet.com/app/news-upload/2020/07/GettyImages-1191505160-1024x683.jpg " width="400" height="300">
+

@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<head>
+	<title>Leaflet Map</title>
+	<!--Leaflet stylesheets and source information can be found below-->
+	<link rel="stylesheet" href="https://unpkg.com/leaflet@1.0.3/dist/leaflet.css" /> 
+	<script src="https://unpkg.com/leaflet@1.7.1/dist/leaflet.js"
+    integrity="sha512-XQoYMqMTK8LvdxXYG3nZ448hOEQiglfqkJs1NOQV44cWnUrBc8PkAOcXy20w0vlaXaVUearIOBhiXZ5V3ynxwA=="
+    crossorigin=""></script>
+	<!--This is a link to the Leaflet JS library-->
+	<script src="https://unpkg.com/leaflet@1.0.3/dist/leaflet.js"></script>
+	<!--Links javascript data and by extension the tweets database stored in PGadmin via the fetchData function-->
+	<script language="javascript" type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/1.7.2/jquery.min.js"></script>
+        <link rel="stylesheet" media="all" href="Index_style.css" type="text/css">
+        <script language="javascript" type="text/javascript" src="script.js"></script>
+
+
+<!--The fetchData function calls the php file which will query the tweet data based upon inputs and this will populate the leaflet map-->
+<BODY onload = "fetchData()">
+
+<!--Code from lines 21 to 79 adapted from the WS3 schools tutorial on how to create interactive banners. -->
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<style>
+* {box-sizing: border-box;}
+
+body { 
+  margin: 0;
+  font-family:Monaco;
+}
+
+.header {
+  overflow: hidden;
+  background-image: url("https://i.pinimg.com/originals/72/50/b0/7250b0a1553c81e102bab8490999060e.jpg");
+  padding: 40px 30px;
+  background-repeat: no-repeat;
+  background-size: 2800px 800px;
+}
+
+.header a {
+  float: center;
+  color: white;
+  text-align: center;
+  padding: 12px;
+  text-decoration: none;
+  font-size: 18px; 
+  line-height: 25px;
+  border-radius: 4px;
+}
+
+.header a.logo {
+  font-size: 25px;
+  font-weight: bold;
+}
+
+.header {
+  background-color: #ddd;
+  color: black;
+}
+
+.header a.active {
+  background-color: #eab676;
+  color: white;
+}
+
+.header-right {
+  float: right;
+}
+
+@media screen and (max-width: 500px) {
+  .header a {
+    float: none;
+    display: block;
+    text-align: left;
+  }
+  
+  .header-right {
+    float: none;
+  }
+}
+</style>
+</head>
+<body>
+
+<div class="header">
+  <a href="#center" class="logo">GY20JCR's Interactive History: Crusades Edition</a>
+  <div class="header-right">
+    <a class="active" href="http://dialogplus.leeds.ac.uk/geog5870/web21/Web_based_GIS/UFO_Test/leaflet_map.html#home">Home</a>
+    <a href="http://dialogplus.leeds.ac.uk/geog5870/web21/Web_based_GIS/UFO_Test/imagery.html">Imagery</a>
+    <a href="http://dialogplus.leeds.ac.uk/geog5870/web21/Web_based_GIS/UFO_Test/add_data.html">Add marker</a>
+  </div>
+</div>
+
+
+
+
+
+
+<p>Welcome to the first installment of GY20JCR's Interactive History. The aim of Interactive History is to help teach people of all ages about key historical events in a more digestable and engaging way. Furthermore the presentation of information on a map is helpful for 
+understanding geographical context for information displayed which is difficult when engaging with conventional literature. </p>
+<p>This iteration will be covering key events of the First,Second,Third and Fourth Crusades which were a series of religious conflicts ranging from 1096 to 1204. For a visual representation of sites presented please visit the Imagery tab or if you would like to add locations you think were also important during this time period please visit the Add marker tab.  </p>
+
+<!--The global var map in script.js will be loaded with the following properties-->
+<DIV id="map" style="width: 700px; height: 700px"></DIV>
+
+<p>The map above is composed of 39 markers representing key cities and landmarks present throughout the crusader era. References for displayed information can be found within the supporting submission document. Please be aware that some of the historical content may not be appropriate for very young children and therefore information should be screened beforehand. Helmet icons were sourced from <a href="https://helmeeet.blogspot.com/2019/12/knight-helmet-cartoon-png.html">https://helmeeet.blogspot.com/2019/12/knight-helmet-cartoon-png.html.</a>
