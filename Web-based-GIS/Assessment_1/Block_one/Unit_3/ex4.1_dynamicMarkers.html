@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<head>
+	<script type="text/javascript" src="https://maps.google.com/maps/api/js?sensor=false"></script><!--link to google maps JS file (note APIv2 is deprecated as of May 26 2021)-->
+	<script type="text/javascript" src="markerData.js"></script> <!--link to JS file named markerData.js-->
+	<script type="text/javascript" src="dynamicMarkers.js"></script> <!--link to JS file named dynamicMarkers.js-->
+	<link rel="stylesheet" media="all" href="Index_style.css" type="text/css"> <!--link to CSS file named map_style.css-->
+	<title>Dynamic Markers Example</title>
+</head>
+
+<body onload="initialize()">
+	<h1>Population of West Yorkshire major settlements with big city markers</h1> <!--title-->
+	<p><a href="http://dialogplus.leeds.ac.uk/geog5870/web21/Web_based_GIS/Assessment 1/index.html">My index page</a></p> <!--link back to the index page which contains live versions of all work-->
+	<div class="gmap" id="map_canvas" style="width:80%; height:80%"></div>
+	        <p style="color:black;font-size:15px;">The map above displays 5 major settlements around West Yorkshire. Settlements include, Leeds, Bradford, Kirklees, Calderdale 
+              and Wakefield. Leeds is the largest settlement out of the 5 displayed with a population of 715402 and the smallest settlement is Calderdale with a population 
+			  of 192405. Markers were downloaded via	the mapicons.mapmarker icon hub. The populations for major settlements were taken from the UK data service website. 			  </p>
+	        <p style="color:black;font-size:15px;">For more icons for use in mapping search below:</p>
+        <li><a href = 'https://mapicons.mapsmarker.com/'>Mapicons.mapsmarker website</a></li><!--reference for map icons-->
+        
+        
+        <p style="color:black;font-size:15px;">Data available at:</p><!--reference for marker information-->
+        <li><a href = 'https://census.ukdataservice.ac.uk/'>Census UK data service</a></li>
+		<li><a href = 'https://www.britannica.com/place/Leeds-England'>Britannica website (City historical information)</a></li>
+		<li><a href = 'https://www.calderdale.gov.uk/wtw/timeline/1900-2000/1900-2000-1.html'>Calderdale.gov website (City historical information)</a></li>
+        
+ </body>
+</html>
+
