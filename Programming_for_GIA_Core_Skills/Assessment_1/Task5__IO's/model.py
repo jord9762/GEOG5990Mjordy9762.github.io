@@ -1,12 +1,15 @@
 import random
+#imports a series of python operators which may not be available for use by default using Spyder. 
 import operator
+#imports features of pyplot and numpy
 import matplotlib.pyplot
+##imports the csv library necessary for reading the 'environmental' csv data (in.csv). 
 import csv
+#imports the agentframework file which must be in the same directory to work, by importing this we can import the agent class.
 import agentframework
-import os
 import sys
 
-
+#creates a new empty list for what will be the csv environment data
 environment = []
 agents = []
 num_of_agents = 10
@@ -28,9 +31,9 @@ for row in reader: # A list of rows
 for i in range(num_of_agents):
     agents.append(agentframework.agent(environment))
 
-#check agents
-for i in range(num_of_agents):
-   print(agents[i])    
+#check agents to make sure everything is running smoothly
+#for i in range(num_of_agents):
+   #print(agents[i])    
 
 # Move the agents.
 for j in range(num_of_iterations):
@@ -40,7 +43,7 @@ for j in range(num_of_iterations):
     
         
         
-
+#plots the agents 
 matplotlib.pyplot.xlim(0, 100)
 matplotlib.pyplot.ylim(0, 100)
 matplotlib.pyplot.imshow(environment)
