@@ -1,4 +1,6 @@
+#imports the random package, helps to generate pseudo random numbers
 import random
+
 
 
 
@@ -94,6 +96,7 @@ class agent:
             
             
     def share_with_neighbours(self, neighbourhood):
+     #random shuffle will reorder the sequence of a list, for more information visit: https://www.w3schools.com/python/ref_random_shuffle.asp
      random.shuffle(self.agents)
      for agent in self.agents:
         dist = self.distance_between(agent)
@@ -103,7 +106,7 @@ class agent:
             self.store = ave
             agent.store = ave
            
-
+#calculates distance between agents
     def distance_between(self, agent):
        return (((self._x - agent._x)**2) + ((self._y - agent._y)**2))**0.5
         
