@@ -9,7 +9,7 @@ body {
 /* Aligned text toward the left of the page */
           text-align: left;
 /* Created a blue to grey background hue which matched the twitter logo adapted from code available at: https://www.quirksmode.org/css/images/angles.html*/
-background:linear-gradient(315deg,dodgerblue,white);
+background:linear-gradient(15deg,dodgerblue,white);
 /* Prevents breaks in gradient due to scrolling, adapted from code available at: https://stackoverflow.com/questions/20070220/extend-background-gradient-across-body-without-background-attachment-fixed*/
     background-size: 100% 1800px;
    
