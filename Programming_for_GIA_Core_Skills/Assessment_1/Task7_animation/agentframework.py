@@ -3,7 +3,7 @@ import random
 
 
 
-
+#creates class agent, this will be utilised by model.py
 class agent:
     
     
