@@ -27,8 +27,8 @@ for j in range(num_of_iterations):
         else:
             agents[i][1] = (agents[i][1] - 1) % 100
 
-#running the line of code whcih says agents [] as well as agents. append will change the specified co-ordinates
-#running the agents.append will add new values onto the end of our agents tuple, while preserving the previous
+#running the line of code whcih says agents [] as well as agents.append will change the specified co-ordinates
+#running the agents.append will add new values onto the end of our agents list, while preserving the previous
 #from left to right we have y0,x0,y1,x1
 
 print(max(agents))
