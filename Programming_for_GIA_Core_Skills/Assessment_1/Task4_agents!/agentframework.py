@@ -1,8 +1,9 @@
 import random
-
+"""Key ideas"""
 """init behaves like a constructor for the class agent. Adding additional arguments after self requires 
 specification of values otherwise an error will show up claiming positional arguments are missing. Self is automatically provided for the 
 class. Look here for more info on self: https://www.youtube.com/watch?v=AjYOMk-4NIU"""
+#creates the class agent which will be called by our model
 class agent:
     #object being created
     def __init__(self):
