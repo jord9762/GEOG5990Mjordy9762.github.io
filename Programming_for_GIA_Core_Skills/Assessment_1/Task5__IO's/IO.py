@@ -1,3 +1,4 @@
+#imports the csv library necessary for reading the 'environmental' csv data (in.csv) 
 import csv
 import matplotlib
 import sys
