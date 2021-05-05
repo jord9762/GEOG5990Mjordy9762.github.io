@@ -1,14 +1,19 @@
 import matplotlib
 matplotlib.use('TkAgg')
-
+#imports random library which is helpful for testing outcomes, contains functions such as shuffle
 import random
+#imports operators which may be missing from default Spyder
 import operator
+#imports the csv library necessary for reading the 'environmental' csv data (in.csv). 
 import csv
+#imports the agentframework file which must be in the same directory to work, by importing this we can import the agent class.
 import agentframework
+#imports animations from pyplot which will allow 
 import matplotlib.animation 
 import matplotlib.pyplot
 import requests
 import bs4
+#provides connection between the standard python interface to the Tk GUI toolkit
 import tkinter
 
 
@@ -18,13 +23,15 @@ the code can be ran in the command prompt. Note to run this code more than once 
 
 """https://www.youtube.com/watch?v=8exB6Ly3nx0 this excellent resource had info on combining GUI with matplotlib data"""
 
+#creates a new empty list for what will be the csv environment data
 environment = []
+#empty list for agents
 agents = []
 num_of_agents = 10
 num_of_iterations = 100
 neighbourhood = 20
 
-
+#specifies pop up figure dimensions
 fig = matplotlib.pyplot.figure(figsize=(7, 7))
 ax = fig.add_axes([0, 0, 1, 1])
 
@@ -37,16 +44,17 @@ def run():
 
 
  
-    
+#used to call GUI 
 root = tkinter.Tk()
 root.wm_title("Model")
 #Open window having dimension 700x700
 root.geometry('700x700')
 menu_bar = tkinter.Menu(root)
 root.config(menu=menu_bar)
+#configures GUI background to grey
 root.configure(background="grey")
 
-
+#my_button class and parameters below change the GUI button to blue
 my_button = tkinter.Button(root, text="Run model", command=run, bg='blue')#https://pythonexamples.org/python-tkinter-button-background-color/#:~:text=You%20can%20change%20the%20background,bg%20property%20as%20shown%20below.&text=The%20default%20color%20of%20Tkinter%20Button%20is%20grey.
 my_button.pack(side=tkinter.TOP)#https://www.youtube.com/watch?v=Uk2FivOD8qo got idea from here
 
@@ -85,7 +93,7 @@ def update(frame_number):
         
            
             
-    #show agents 
+    #plot agents 
     matplotlib.pyplot.xlim(0, 100)
     matplotlib.pyplot.ylim(0, 100)
     matplotlib.pyplot.imshow(environment)
@@ -105,10 +113,10 @@ def gen_function(b = [0]):
         yield store			# Returns control and waits next call.
         store = store + 1
 
-#Extras!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
 
 
 
-        
+
+#script is ended by calling of tkinter mainloop      
 tkinter.mainloop()
 
