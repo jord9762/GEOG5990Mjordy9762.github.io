@@ -1,8 +1,8 @@
-#allows the presentation of plots,graphs etc.. will be used to display agents
+#importing the random package, able to create psuedo random number for testing purposes
 import random
 #allows additional operations such as the itemgetter function
 import operator
-#importing the random package, able to create psuedo random number for testing purposes
+#allows the presentation of plots,graphs etc.. will be used to display agents
 import matplotlib.pyplot
 
 import csv
