@@ -1,10 +1,10 @@
-#importing the random package
+#importing the random package, able to create psuedo random number for testing purposes
 import random 
-#assigning the integer 50 to both of the above variables 
+#assigning the integer 50 to both of the below variables 
 y0 = 50
 x0 = 50
-#either subtracts by one or adds by one at random, adding if less than 0.5 
-#subtracting if greater than 0.5, in this sense it is not truly random. 
+"""either subtracts by one or adds by one at random, adding if less than 0.5 
+subtracting if greater than 0.5, in this sense it is not truly random. """
 if random.random() < 0.5:
     y0 += 1
 else:
@@ -16,7 +16,6 @@ else:
     x0 -= 1
 #prints variables after being randomised
 print(y0, x0)
-
 
 
 #lines 23 to 36 repeat the previous process for a second set of co-ordinates.
@@ -32,7 +31,7 @@ if random.random() < 0.5:
     x1 += 1
 else:
     x1 -= 1
-
+#Used for testing purposes to ensure that variables did not have spelling mistakes
 print(y1, x1)
 #Whole equation I initially came up with for calculating euclidian distance between points, efficent but potentially difficult to understand. 
 answer = (((y0 - y1)**2) + ((x0 - x1)**2))**0.5 
