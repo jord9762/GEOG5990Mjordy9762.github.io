@@ -104,7 +104,7 @@ class agent:
             self.store = ave
             agent.store = ave
             print("sharing " + str(dist) + " " + str(ave))
-
+#finds euclidian distance between agents
     def distance_between(self, agent):
        return (((self._x - agent._x)**2) + ((self._y - agent._y)**2))**0.5
         
