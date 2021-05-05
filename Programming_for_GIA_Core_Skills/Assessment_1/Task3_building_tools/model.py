@@ -1,6 +1,10 @@
+#allows the presentation of plots,graphs etc.. will be used to display agents
 import random
+#allows additional operations such as the itemgetter function
 import operator
+#importing the random package, able to create psuedo random number for testing purposes
 import matplotlib.pyplot
+#time package will be used to help check the efficency of the code. warnings arise for certain functions in this package being depricated
 import time
 
 """we enter in agents row a and row b because this reduces our code for when the function is called, we now no longer need to express an agent 
@@ -31,7 +35,7 @@ for j in range(num_of_iterations):
         else:
             agents[i][1] = (agents[i][1] - 1) % 100
 
-
+#calculates euclidian distance between agents
 answer = (((agents[0][0] - agents[1][0])**2) + ((agents[0][1] - agents[1][1])**2))**0.5
 print(answer)
 
@@ -41,20 +45,21 @@ print(answer) could get distance between different agents individually but obvio
 
 
 answer = distance_between(agents[0], agents[1])
+#below is a test to check code is running smoothly, print statements are important to help identify where problems may be occuring
 print(answer)
+
 """so below here we are saying for everything i and j in our agents, do not calculate distance between the same agent, then calculate the distance
 in positions 0 and 1 using the function specified at the start of our code in the distance between function."""
 
- 
 for i in range(num_of_agents):
     for j in range(num_of_agents):
-
-        if agents[i] != agents[j]: # omitts distance between agents which are the same
+#!= means not equal to and omitts distance between agents which are the same
+        if agents[i] != agents[j]: 
             distance = distance_between(agents[0], agents[1])
             answer = distance_between(agents[i], agents[j])
              
             
- #lines 58 to 62 will print the time it takes for code to execute.      
+ #lines 63 to 64 will print the time it takes for code to execute.      
 end = time.clock()
 print("time = " + str(end - start))
 """Time for 10 agents 0.15 seconds
