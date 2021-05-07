@@ -1,4 +1,4 @@
-![alt text](http://url/to/img.png)
+![alt text](https://cdn2.vectorstock.com/i/1000x1000/50/46/binary-code-screen-black-vector-3675046.jpg)
 
   <h3 align="center">GY20JCR's Leeds coding projects</h3>
 
