@@ -19,7 +19,7 @@ background:linear-gradient(215deg,#86ef90,white);
     color: black;
 /* Changed font size to make for easier viewing*/
     font-size:20px;
-/* Changed font to Calibri*/
+/* Changed font to TNR*/
     font-family: "Times New Roman";
 }
 
@@ -28,7 +28,7 @@ background:linear-gradient(215deg,#86ef90,white);
     border: double;
 }
 
-/* Edited the scroll bar to be dark blue and form a stretched stadium shape. Adapted from code available at:https://css-tricks.com/the-current-state-of-styling-scrollbars/*/
+/* Edited the scroll bar to be dark green and form a stretched stadium shape. Adapted from code available at:https://css-tricks.com/the-current-state-of-styling-scrollbars/*/
 ::-webkit-scrollbar-track
 {
   -webkit-box-shadow: inset 0 0 6px rgba(0,0,0,0.3);
