@@ -1,5 +1,4 @@
-# Leeds_coding_assessments
-website
+![alt text](http://url/to/img.png)
 
   <h3 align="center">GY20JCR's Leeds coding projects</h3>
 
