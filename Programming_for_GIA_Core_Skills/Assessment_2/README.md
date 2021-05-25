@@ -1,4 +1,5 @@
 <h1>Assessment 2 files</h1>
+<h1>Note: This code was ran in Spyder verson 5.0.4, all code except proto_model.py works as intended. If access to Spyder version 5.0.4 is impossible please use a Jupyter notebook.</h1>
 <h4>drunk.txt</h4>
 <p>Environment data which displayed information regarding the home locations.</p>
 <h4>drunkframework.py</h4>
