@@ -9,7 +9,9 @@ class Drunk():
         self._y = 141
         self.store = 0
         self.identification = identification
-        #x and y are set to 139/141 as these are co-ordinates for the pub
+        #x and y are set to 139/141 as these are co-ordinates for the pub.
+        #environment will house the CSV for house and pub data.
+        #identification will house variables for each drunk so that they can stop when reaching their home. 
         
         
         
@@ -68,7 +70,7 @@ class Drunk():
 
 # Method to move.
 # % is the modulus symbol which means to return the remainder. This will prevent any agents/drunks from exceeding or going lower than the specified
-#300x300 grid or higher. 
+#300x300 grid or higher. Essentially this will move drunks up or down and left or right at eat iteration. 
     def move(self):
         if random.random() < 0.5:
             self._y = (self._y + 1) % 300
