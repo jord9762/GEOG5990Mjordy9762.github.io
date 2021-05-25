@@ -11,7 +11,7 @@ import matplotlib.pyplot
 
 """WARNING!!!!!"""
 """This code was tested using Spyder 5.0.4, should any problems be encountered using older
-models please try """
+models please try using a Jupyter notebook."""
 
 #creates a new empty list for what will be the csv environment data, see https://docs.python.org/3/library/csv.html for more
 environment = []
