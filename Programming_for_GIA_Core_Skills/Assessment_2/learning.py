@@ -23,9 +23,12 @@ the code can be ran in the command prompt. Note to run this code more than once 
 environment = []
 #drunks adapted from agents from GUI's practical
 drunks = []
+#specifies number of drunks/agents
 num_of_drunks = 25
+#outlines the number of iterations the line 64-78 code will undergo
 num_of_iterations = 10
 
+#sets the dimensions for the matplotlib plots
 fig = matplotlib.pyplot.figure(figsize=(7, 7))
 ax = fig.add_axes([0, 0, 1, 1])
 
@@ -100,7 +103,7 @@ def update(frame_number):
                     
                     
                     
-                    
+    #code on lines 107 to 113 embeds a scatter plot into the tkinter GUI with the environment as a backdrop.                 
     matplotlib.pyplot.xlim(0, 300)
     matplotlib.pyplot.ylim(0, 300)
     matplotlib.pyplot.imshow(environment)
