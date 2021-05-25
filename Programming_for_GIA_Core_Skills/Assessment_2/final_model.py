@@ -11,7 +11,7 @@ import matplotlib.pyplot
 
 """WARNING!!!!!"""
 """This code was tested using Spyder 5.0.4, should any problems be encountered using older
-models please try using a Jupyter notebook."""
+models please try """
 
 #creates a new empty list for what will be the csv environment data, see https://docs.python.org/3/library/csv.html for more
 environment = []
@@ -46,6 +46,7 @@ for row in reader:
         rowlist.append(value)
     environment.append(rowlist)
 f.close()
+#print (rowlist) Used this to check list structure
 
 #Code on lines 46-50 appends the density list output to a 300x300 grid, this code is needed 
 #to prevent the error "IndexError: list index out of range"                                
@@ -106,7 +107,3 @@ matplotlib.pyplot.imshow(environment)
 for i in range(num_of_drunks):
         matplotlib.pyplot.scatter(drunks[i]._x, drunks[i]._y)
         print("we're home!")    
-      
-
-
-      
