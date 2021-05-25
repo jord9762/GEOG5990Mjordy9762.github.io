@@ -10,4 +10,4 @@ also be printed showing the areas where the drunks travelled throughout the iter
 <h4>learning.py</h4>
 <p>The code learning.py is a file which helps the user understand the underlying processes occuring in final_model.py. This helped tremendously in the development process as it helped visualise how agents traversed the environment as well as the effect this had. (Assessed code)</p>
 <h4>proto_model.py</h4>
-<p>This code was just an earlier version of final_model.py where I made the mistake of combining the process of tracking the density and traversing the environment, therefore the values of the environment changed thus distorting the identification/home process. </p>
+<p>This code was just an earlier version of final_model.py where I made the mistake of combining the process of tracking the density and traversing the environment, therefore the values of the environment changed thus distorting the identification/home process. Kept in for an context regarding the development of this project. (Non-assessed code) </p>
