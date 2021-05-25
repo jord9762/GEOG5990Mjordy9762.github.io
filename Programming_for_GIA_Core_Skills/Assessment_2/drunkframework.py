@@ -1,6 +1,6 @@
 import random
 
-# Define a drunk class. This will decide wwhere the drunks begin their journey home
+# Define a drunk class. This will decide where the drunks begin their journey home
 class Drunk():
     def __init__(self, environment, drunks, identification):
         self.drunks = drunks
