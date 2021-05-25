@@ -1,5 +1,7 @@
 <h1>Assessment 2 files</h1>
 <b>Note: This code was ran in Spyder verson 5.0.4, all code except proto_model.py works as intended. If access to Spyder version 5.0.4 is impossible please use a Jupyter notebook. If using a Jupyter notebook ensure all files are in the same directory. </b>
+<h4>Instructions.md</h4>
+<p>Displays instructions on how to run the final version of the drunks model (please refer to this if struggling to get code to run.).</p>
 <h4>drunk.txt</h4>
 <p>Environment data which displayed information regarding the home locations.</p>
 <h4>drunkframework.py</h4>
