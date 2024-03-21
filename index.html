@@ -1,101 +1,109 @@
 <!DOCTYPE html>
-<html>
 <head>
-  <title>Jordan's web-based GIS work</title>
-  <link rel="stylesheet" media="all" href="Index.css" type="text/css"> <style>
-    * {
-      box-sizing: border-box;
-    }
-
-    body {
-      margin: 0;
-      font-family: Monaco;
-    }
-
-    .header {
-      overflow: hidden;
-      color: green;
-      padding: 40px 30px;
-      background-repeat: no-repeat;
-      background-size: 2800px 800px;
-    }
-
-    .header a {
-      float: center;
-      color: white;
-      text-align: center;
-      padding: 18px;
-      text-decoration: none;
-      font-size: 18px;
-      line-height: 25px;
-      border-radius: 4px;
-    }
-
-    .header a.logo {
-      font-size: 25px;
-      font-weight: bold;
-    }
-
-    .header {
-      background: linear-gradient(315deg, black, green);
-    }
-
-    .header a.active {
-      background: linear-gradient(315deg, dodgerblue, dodgerblue);
-      color: white;
-    }
-
-    .header-right {
-      float: right;
-    }
-
-    @media screen and (max-width: 500px) {
-      .header a {
-        float: none;
-        display: block;
-        text-align: left;
-      }
-
-      .header-right {
-        float: none;
-      }
-    }
-  </style>
+ <title>Jordan's web-based GIS work</title>
+ <link rel="stylesheet" media="all" href="Index.css" type="text/css"> <!--link to CSS file-->
 </head>
-
 <body>
-  <div class="header">
-    <a href="#center" class="logo">GY20JCR's Coding Assessment Hub</a>
-    <div class="header-right">
-      <a class="active" href="https://jord9762.github.io/Leeds_coding_assessments/">Home</a>
-      <a href="https://github.com/jord9762/Leeds_coding_assessments/tree/main/Programming_for_GIA_Core_Skills/Assessment_1">Programming for GIA Core Skills: Assessment 1</a>
-      <a href="https://github.com/jord9762/Leeds_coding_assessments/tree/main/Programming_for_GIA_Core_Skills/Assessment_2">Programming for GIA Core Skills: Assessment 2</a>
-      <a href="http://dialogplus.leeds.ac.uk/geog5870/web21/Web_based_GIS/Assessment%201/index.html">Web-based GIS: Assessment 1</a>
-      <a href="http://dialogplus.leeds.ac.uk/geog5870/web21/Web_based_GIS/UFO_Test/leaflet_map.html">Web-based GIS: Assessment 2</a>
-    </div>
-  </div>
+	<!--Code from lines 21 to 79 adapted from the W3S schools tutorial on how to create interactive banners. -->
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<style>
+* {box-sizing: border-box;}
 
-  <style>
-    p {
-      text-align: center;
-      font-family: Monaco;
-    }
+body { 
+ margin: 0;
+ font-family:Monaco;
+}
 
-    h1 {
-      text-align: center;
-      font-size: 20px;
-      font-family: Monaco;
-    }
-  </style>
+.header {
+ overflow: hidden;
+ color: green;
+ padding: 40px 30px;
+ background-repeat: no-repeat;
+ background-size: 2800px 800px;
+}
 
-  <h1>Biography</h1>
-  <p>
-    Welcome to my homepage for my coding modules at the University of Leeds. I am currently studying a Msc in GIS and I elected to take both Web-based GIS and Programming for GIS analysis to help broaden my skillset. I have had a keen interest in GIS ever since I first encountered it 4 years ago during my undergraduate studies.
-  </p>
+.header a {
+ float: center;
+ color: white;
+ text-align: center;
+ padding: 18px;
+ text-decoration: none;
+ font-size: 18px; 
+ line-height: 25px;
+ border-radius: 4px;
+}
 
-  <p>
-    Past academic projects I have worked on include, quantifying peat erosion rates in the Forest of Bowland, conducting a viewshed analysis for wind turbine proposals in Scotland and measuring deprivation in the Yorkshire administrative boundary.
-  </p>
+.header a.logo {
+ font-size: 25px;
+ font-weight: bold;
+}
 
-  <p>
-    In the banner above you will find links for all the work I have completed for my module thus far. Visit my github if you have an interest in the source code which went
+.header {
+ background: linear-gradient(315deg,black,green);
+}
+
+.header a.active {
+ background: linear-gradient(315deg,dodgerblue,dodgerblue);
+ color: white;
+}
+
+.header-right {
+ float: right;
+}
+
+@media screen and (max-width: 500px) {
+ .header a {
+  float: none;
+  display: block;
+  text-align: left;
+ }
+  
+ .header-right {
+  float: none;
+ }
+}
+	
+</style> 	
+</head>
+<body>	
+	 <!--Above code adapted from the W3S schools tutorial on how align text towards the centre. -->	
+<div class="header">
+ <a href="#center" class="logo">GY20JCR's Coding Assessment Hub</a>
+ <div class="header-right">
+  <a class="active" href="https://jord9762.github.io/Leeds_coding_assessments/">Home</a>
+  <a href="https://github.com/jord9762/Leeds_coding_assessments/tree/main/Programming_for_GIA_Core_Skills/Assessment_1">Programming for GIA Core Skills: Assessment 1</a>
+  <a href="https://github.com/jord9762/Leeds_coding_assessments/tree/main/Programming_for_GIA_Core_Skills/Assessment_2">Programming for GIA Core Skills: Assessment 2</a>
+  <a href="http://dialogplus.leeds.ac.uk/geog5870/web21/Web_based_GIS/Assessment%201/index.html">Web-based GIS: Assessment 1</a>  
+  <a href="http://dialogplus.leeds.ac.uk/geog5870/web21/Web_based_GIS/UFO_Test/leaflet_map.html">Web-based GIS: Assessment 2</a>
+ </div>
+</div>
+	
+<style>
+p {text-align: center;font-family:Monaco;}
+h1 {text-align: center;font-size:20px;font-family:Monaco;}
+</style>
+<h1>Biography</h1>
+<p>Welcome to my homepage for my coding modules at the University of Leeds. I am currently studying a Msc in GIS and I elected to take both Web-based GIS and Programming for GIS
+analysis to help broaden my skillset. I have had a keen interest in GIS ever since I first encountered it 4 years ago during my undergraduate studies. </p>
+
+<p>Past academic projects I have worked from include, quantifying peat erosion rates in the Forest of Bowland, conducting a viewshed analysis for wind turbine proposals in Scotland and measuring deprivation
+in the Yorkshire administrative boundary. </p>
+
+<p>In the banner above you will find links for all the work I have completed for my module thus far. Visit my github if you have an interest in the source code which went into creating this webpage. </p>
+<p>
+For more information regarding my hobbies and experience please visit my Linkedin website.<a href="https://www.linkedin.com/in/jordan-reynoldson-0a46791b7/">Linkedin wepbage</a></p>
+
+
+
+
+<h1>Programming for GIA Core Skills: Assessment 1 breakdown</h1>
+ <p>This assessment focussed on the principles of agent based modelling. The final submission outlines the steps taken to create an agent based model accompanied with documentation advising on best ways to execute the code. Links presented in the assessment 1 page will direct you to Github where files are available for download</p>
+<h1>Programming for GIA Core Skills: Assessment 2 breakdown</h1>
+<p>This assessment focused on creating an advanced version of the agent-based modelling theory encountered in assessment 1. The aim for this assignment was to get a series of 25 drunks to navigate around a 300x300 environment grid, stopping when they had reached their home.
+  Following this the brief required a section of code which would write a file depicting the density of the drunks travel patterns. Links presented in the assessment 2 page will direct you to Github where files are available for download</p>
+<h1>Web-based GIS: Assessment 1 breakdown</h1>
+<p>This assessment focused on learning the basics of web design. Each topic introduces vital coding languages/markup languages including PHP,HTML and Javascript. Topics also utilised a combination of google maps and leaflet to help display the utility of GIS and coding working holistically. </p>
+<h1>Web-based GIS: Assessment 2 breakdown</h1>
+<p>This assessment featured a leaflet map displaying data regarding key landmarks involved in the 1st through to the 4th Crusades. The data was handcrafted by myself by researching the landmarks, adding information regarding the landmarks geographical location and finally uploading the data to PGSQL. Following this through the use of PHP and Javascript the data was presented on a leaflet map.</p>
+</style>
+</style>
